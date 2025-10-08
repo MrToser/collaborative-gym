@@ -214,6 +214,12 @@ if __name__ == "__main__":
     parser.add_argument("--redis-url", type=str, default="redis://localhost:6379/0")
     parser.add_argument("--add-task-demo", action="store_true")
     parser.add_argument("--debug", action="store_true")
+    parser.add_argument(
+        "--prompt-path",
+        type=str,
+        default="demo_agent/auto_agent/prompts.yaml",
+        help="Path to the prompt template file.",
+    )
     args = parser.parse_args()
 
     secrets = toml.load("secrets.toml")
