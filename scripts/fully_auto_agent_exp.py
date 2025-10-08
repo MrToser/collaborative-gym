@@ -10,6 +10,8 @@ import sys
 import time
 import toml
 
+from utils.logger import Logger
+
 from collaborative_gym.core import TeamMemberConfig
 from collaborative_gym.runner import Runner
 from collaborative_gym.utils.string import make_string_green
@@ -126,12 +128,20 @@ def run_experiments(args, env_config_dir, config_template, runner, team_member_c
 
 
 def main():
+    logger = Logger()
+    logger.info("Logger initialized for fully autonomous agent experiments.")
+    
+    
+    logger.info("Parse arguments and set up environment.")
     args = parse_arguments()
     load_and_set_secrets(args.secret_path)
     
     env_config_dir = create_env_config_dir(args.work_dir, args.task, args.result_dir_tag)
+    logger.info(f"Environment config directory created at {env_config_dir}.")
     config_template = select_config_template(args.task)
+    logger.info(f"Selected config template for task {args.task}.")
     runner = init_runner(args.work_dir, args.task, args.result_dir_tag)
+    logger.info(f"Runner initialized with results directory {runner.result_dir}.")
     register_exit_signals(runner)
     
     team_member_config = toml.load(args.team_member_config_path)
