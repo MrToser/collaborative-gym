@@ -30,10 +30,11 @@ from tenacity import stop_after_attempt, retry, wait_exponential
 
 from collaborative_gym.utils.jupyter_client import JupyterClient
 
-
+import socket
+import time
 class CustomDockerJupyterServer(DockerJupyterServer):
     """Wrapper around DockerJupyterServer to allow for custom mounting of volumes."""
-
+    
     def __init__(
         self,
         *,
@@ -75,7 +76,8 @@ class CustomDockerJupyterServer(DockerJupyterServer):
         """
         if container_name is None:
             container_name = f"co-gym-jupyter-{uuid.uuid4()}"
-
+        print("-"*25,"in CustomDockerJupyterServer __init__","-"*25)
+        print("container_name:", container_name)
         client = docker.from_env()
         if custom_image_name is None:
             raise ValueError("Custom image name must be provided")
@@ -91,7 +93,7 @@ class CustomDockerJupyterServer(DockerJupyterServer):
             self._token = secrets.token_hex(32)
         else:
             self._token = token
-
+        print("self._token:", self._token)
         # Run the container
         env = {"TOKEN": self._token}
         env.update(docker_env)
@@ -102,11 +104,16 @@ class CustomDockerJupyterServer(DockerJupyterServer):
                 os.makedirs(local_directory)
             os.chmod(local_directory, 0o777)  # Ensure the directory is writable.
             container_directory = (
-                container_directory or "/home/jovyan/work"
+                container_directory or "/root/collaborative-gym"
             )  # Default directory.
             volumes[local_directory] = {"bind": container_directory, "mode": "rw"}
         self.volumes = volumes
         # New code to mount a local directory to the container ends here
+        # sjh add
+        outer = client.containers.get(socket.gethostname())
+        outer_net = list(outer.attrs["NetworkSettings"]["Networks"].keys())[0]
+        print(f"外层容器网络: {outer_net}")
+        
         container = client.containers.run(
             image_name,
             detach=True,
@@ -116,12 +123,27 @@ class CustomDockerJupyterServer(DockerJupyterServer):
             name=container_name,
             volumes=volumes,
             device_requests=device_requests,
+            network=outer_net,
         )
         _wait_for_ready(container)
+        inner_ip = container.attrs["NetworkSettings"]["Networks"][outer_net]["IPAddress"]
+        print(f"内层容器 IP: {inner_ip}")
+        self.inner_ip = inner_ip
         container_ports = container.ports
-        self._port = int(container_ports["8888/tcp"][0]["HostPort"])
+        print("container_ports:", container_ports)
+        # if "8888/tcp" in container_ports:
+        #     if container_ports["8888/tcp"]:
+        #         self._port = int(container_ports["8888/tcp"][0]["HostPort"])
+        #     else:
+        #         # 端口未暴露，使用默认端口
+        #         self._port = 8888
+        # else:
+            # host 模式或未暴露端口，默认端口即 8888
+        self._port = 8888
+        # self._port = int(container_ports["8888/tcp"][0]["HostPort"])
+        print("self._port:", self._port)
         self._container_id = container.id
-
+        print("self._container_id:", self._container_id)
         def cleanup() -> None:
             try:
                 inner_container = client.containers.get(container.id)
@@ -136,8 +158,48 @@ class CustomDockerJupyterServer(DockerJupyterServer):
 
         self._cleanup_func = cleanup
         self._stop_container = stop_container
+        print("-"*25,"end of CustomDockerJupyterServer __init__","-"*25+'\n\n')
 
+    def get_network_mode(self) -> Optional[str]:
+        """Return appropriate network_mode for docker SDK."""
+        cur_cid = self._current_container_id()
+        if cur_cid:
+            # 使用当前容器的网络命名空间
+            network_mode = f"container:{cur_cid}"
+            # print(f"Detected current container ID: {cur_cid}")
+            # print(f"Using network_mode = '{network_mode}'")
+            return network_mode
+        else:
+            # 宿主机环境下，不指定 network_mode（默认 bridge）
+            print("Not running inside a container, using default Docker network mode.")
+            return None
+    
+    def _current_container_id(self) -> Optional[str]:
+        """Try to detect the current Docker container ID."""
+        # 🧠 方法 1: 通过环境变量 HOSTNAME (容器启动时默认设置为容器 ID)
+        # 这里使用的是绝对id,需要动态调整
+        # cid = os.environ.get("HOSTNAME")
+        cid = "autodl-container-6c4642a0d1-f7a79d5c"
+        if cid and len(cid) >= 12:
+            return cid
 
+        # 🧠 方法 2: 通过 /proc/self/cgroup 解析当前 cgroup 路径
+        try:
+            with open("/proc/self/cgroup") as f:
+                for line in f:
+                    parts = line.strip().split("/")
+                    if parts:
+                        maybe = parts[-1]
+                        # 容器 ID 一般为 64 位或 12 位十六进制字符串
+                        if len(maybe) >= 12:
+                            return maybe
+        except Exception:
+            pass
+
+        return None
+
+    
+    
 class CustomJupyterCodeExecutor(CodeExecutor):
     """Adapted from https://github.com/timrbula/autogen/blob/main/autogen/coding/jupyter/jupyter_code_executor.py"""
 
@@ -150,6 +212,7 @@ class CustomJupyterCodeExecutor(CodeExecutor):
         max_retries: int = 2,
         max_history: int = 100,  # Maximum number of cells to keep in history
     ):
+        print("-"*25,"in CustomJupyterCodeExecutor __init__","-"*25)
         if timeout < 1:
             raise ValueError("Timeout must be greater than or equal to 1.")
 
@@ -161,15 +224,24 @@ class CustomJupyterCodeExecutor(CodeExecutor):
 
         if isinstance(jupyter_server, JupyterConnectable):
             self._connection_info = jupyter_server.connection_info
+            self._connection_info.host = jupyter_server.inner_ip
+            print("Revise host in inner_ip for Jupyter connection:", self._connection_info.host)
         elif isinstance(jupyter_server, JupyterConnectionInfo):
             self._connection_info = jupyter_server
+            # 使用innerip替代127.0.0.1
+            self._connection_info.host = jupyter_server.inner_ip
+            print("Revise host in inner_ip for Jupyter connection:", self._connection_info.host)
+            # self._connection_info.host = "172.17.0.1"
         else:
             raise ValueError(
                 "jupyter_server must be a JupyterConnectable or JupyterConnectionInfo."
             )
 
+        print("self._connection_info",self._connection_info)
+        
         self._jupyter_client = JupyterClient(self._connection_info)
         available_kernels = self._jupyter_client.list_kernel_specs()
+        print("available_kernels:", available_kernels)
         if kernel_name not in available_kernels["kernelspecs"]:
             raise ValueError(f"Kernel {kernel_name} is not installed.")
 
@@ -184,7 +256,10 @@ class CustomJupyterCodeExecutor(CodeExecutor):
         self.max_retries = max_retries
         self._execution_history: Deque[CodeBlock] = deque(maxlen=max_history)
         self._skip_history = False  # Flag to prevent infinite recursion
+        print("-"*25,"end of CustomJupyterCodeExecutor __init__","-"*25+'\n\n')
 
+    
+    
     @property
     def code_extractor(self) -> CodeExtractor:
         """Copied from https://github.com/timrbula/autogen/blob/main/autogen/coding/jupyter/jupyter_code_executor.py
@@ -442,6 +517,7 @@ class JupyterManager:
         device_requests: Optional[List] = None,
         timeout: int = 60,
     ):
+        print("-"*35,"in JupyterManager __init__","-"*35)
         self.docker_volume_local_dir = docker_volume_local_dir
         self.docker_server = CustomDockerJupyterServer(
             custom_image_name=custom_image_name,
@@ -455,7 +531,8 @@ class JupyterManager:
 
         self.code_blocks = []
         self.code_results = []
-
+        print("-"*35,"end of JupyterManager __init__","-"*35+'\n\n')
+        
     def close(self):
         self.jupyter_executor.stop()
 

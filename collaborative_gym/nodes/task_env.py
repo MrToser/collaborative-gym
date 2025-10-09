@@ -70,6 +70,8 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
         result_dir: str = "./workdir/results",
         redis_url: str = "redis://localhost:6379/0",
     ):
+        print("-"*60,"in TaskEnvNode __init__","-"*60)
+        print("env_config:", env_config)
         super().__init__(
             input_channel_types=[
                 (f"{env_uuid}/step", JsonObj),
@@ -99,6 +101,9 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
         if type(env_config) is dict:
             env_config = EnvConfig(**env_config)
         self.env_uuid = env_uuid
+        
+        # cid = os.environ.get("HOSTNAME")
+        # print("Detected HOSTNAME:", cid)
         self.env = EnvFactory.make(
             name=env_config.env_class,
             team_members=team_members,
@@ -138,6 +143,7 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
         self.max_tick_cnt = max_tick_cnt
         self.last_step_timestamp = time.time()
         self.max_steps = max_steps
+        print("-"*60,"end of TaskEnvNode __init__","-"*60+'\n\n')
 
     def add_record_to_event_log(
         self,

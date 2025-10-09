@@ -57,14 +57,22 @@ class JupyterClient:
 
     @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
     def list_kernel_specs(self) -> Dict[str, Dict[str, str]]:
+        print("-"*25,"in list_kernel_specs in jupyter_client.py","-"*25)
+        print(f"{self._get_api_base_url()}/api/kernelspecs")
         response = self._session.get(
-            f"{self._get_api_base_url()}/api/kernelspecs", headers=self._get_headers()
+            f"{self._get_api_base_url()}/api/kernelspecs", headers=self._get_headers(),
+            timeout=10,
         )
+        print("response:", response)
+        print("-"*25,"in list_kernel_specs in jupyter_client.py","-"*25,'\n\n')
+        # assert 1==0
+        
         return cast(Dict[str, Dict[str, str]], response.json())
 
     def list_kernels(self) -> List[Dict[str, str]]:
         response = self._session.get(
-            f"{self._get_api_base_url()}/api/kernels", headers=self._get_headers()
+            f"{self._get_api_base_url()}/api/kernels", headers=self._get_headers(),
+            timeout=10,
         )
         return cast(List[Dict[str, str]], response.json())
 
@@ -80,6 +88,7 @@ class JupyterClient:
 
         response = self._session.post(
             f"{self._get_api_base_url()}/api/kernels",
+            timeout=10,
             headers=self._get_headers(),
             json={"name": kernel_spec_name},
         )
@@ -88,6 +97,7 @@ class JupyterClient:
     def delete_kernel(self, kernel_id: str) -> None:
         response = self._session.delete(
             f"{self._get_api_base_url()}/api/kernels/{kernel_id}",
+            timeout=10,
             headers=self._get_headers(),
         )
         response.raise_for_status()
@@ -95,6 +105,7 @@ class JupyterClient:
     def restart_kernel(self, kernel_id: str) -> None:
         response = self._session.post(
             f"{self._get_api_base_url()}/api/kernels/{kernel_id}/restart",
+            timeout=10,
             headers=self._get_headers(),
         )
         response.raise_for_status()

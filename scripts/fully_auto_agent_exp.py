@@ -143,8 +143,9 @@ def main():
     runner = init_runner(args.work_dir, args.task, args.result_dir_tag)
     logger.info(f"Runner initialized with results directory {runner.result_dir}.")
     register_exit_signals(runner)
-    
     team_member_config = toml.load(args.team_member_config_path)
+    
+    logger.info(f"begin run_experiments from index {args.start_idx} to {args.end_idx - 1}.")
     run_experiments(args, env_config_dir, config_template, runner, team_member_config)
 
 

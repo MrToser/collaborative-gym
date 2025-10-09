@@ -151,7 +151,7 @@ class CoAnalysisEnv(CoEnv):
         docker_local_root_dir: str = os.path.join(os.getcwd(), "tmp"),
     ):
         super().__init__(team_members=team_members, env_id=env_id)
-
+        print("-"*50,"in CoAnalysisEnv __init__","-"*50+'\n\n')
         self.use_simulated_dataset = use_simulated_dataset
         self.dataset_root_dir = discovery_bench_root_dir
 
@@ -203,6 +203,7 @@ class CoAnalysisEnv(CoEnv):
 
         # Docker Jupyter sandbox for executing Python code
         self.docker_volume_local_dir = os.path.join(docker_local_root_dir, self.env_id)
+        print("docker_local_root_dir:", docker_local_root_dir)
         os.makedirs(self.docker_volume_local_dir, exist_ok=True)
         self.jupyter_manager = JupyterManager(
             custom_image_name=docker_image_name,
