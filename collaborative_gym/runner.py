@@ -94,6 +94,7 @@ class Runner:
             shell=True,
             preexec_fn=os.setsid,  # Start the subprocess in a new process group
         )
+        print(f"In launch_team_member, type {member.type}\nstart_member_command is:\n {start_member_command}")
         self.subprocesses.append(agent_process)
         time.sleep(5)  # Wait for the node to start
 
@@ -125,6 +126,7 @@ class Runner:
             tick_interval: Time in seconds between tick checks
             max_tick_cnt: Maximum number of ticks before timeout
         """
+        print("^"*20,"In Runner start_session","^"*20)
         if session_uuid in self.sessions:
             print(f"Session {session_uuid} already started")
             return
@@ -143,7 +145,7 @@ class Runner:
             f"--tick-interval {tick_interval} --max-tick-cnt {max_tick_cnt} "
             f"--result-dir {self.result_dir} --redis-url {self.redis_url}"
         )
-        print(start_env_command)
+        print("start_env_command is:",start_env_command)
         if disable_collaboration:
             start_env_command += " --disable-collaboration"
         env_process = Popen(
@@ -154,6 +156,7 @@ class Runner:
         self.subprocesses.append(env_process)
 
         if add_tick:
+            print("in add_tick")
             start_tick_command = (
                 f"python -m collaborative_gym.command start-env-tick-node --env-node-name task_env "
                 f"--env-uuid {env_uuid} --redis-url {self.redis_url}"
@@ -164,6 +167,7 @@ class Runner:
                 preexec_fn=os.setsid,  # Start the subprocess in a new process group
             )
             self.subprocesses.append(tick_process)
+        print("^"*20,"End Runner start_session","^"*20)
 
     def cleanup_subprocesses(self):
         """

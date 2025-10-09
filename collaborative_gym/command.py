@@ -27,6 +27,7 @@ def start_env_node(
     env_config = toml.load(env_config_toml)
     print("Starting env node with config")
     env_config = EnvConfig(**env_config)
+    print("="*20,"_sync_run_node","="*20)
     _sync_run_node(
         NodeConfig(
             node_name=node_name,
@@ -44,7 +45,7 @@ def start_env_node(
         ),
         redis_url,
     )
-
+    print("="*20,"end _sync_run_node","="*20+'\n')
 
 @app.command()
 def start_cmd_user_node(

@@ -258,6 +258,7 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
             None
         """
         # Reset the environment
+        print("="*20,"in TaskEnvNode event_loop","="*20)
         obs, info = self.env.reset()
         action_space = self.env.dump_action_space()
         if not self.disable_collaboration:
@@ -266,7 +267,7 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
                 self.collaboration_acts["send_teammate_message"].dump_json(),
                 self.collaboration_acts["wait_teammate_continue"].dump_json(),
             ]
-
+        print("="*20,"Indicate the start of the task","="*20)
         # Indicate the start of the task
         payload = {
             "task_description": self.env.task_description,
@@ -276,6 +277,7 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
             "example_trajectory": self.env.example_trajectory,  # For agent
             "additional_task_info": self.env.additional_task_info,  # For simulated user
         }
+        print("="*20,"start_action","="*20)
         try:
             start_action = f"START(task_description={self.env.task_description}, query={self.env.query})"
             for role in self.team_members:
@@ -296,8 +298,12 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
         )
 
         # Broadcast the initial observation
+        print("="*20,"in process_observation","="*20)
         processed_obs = self.process_observation(obs)
+        print("="*20,"end process_observation","="*20)
         for role in self.team_members:
+            print("="*15,"role:",role,"="*15)
+            print("="*15,"self.env_uuid:",self.env_uuid,"="*15)
             payload = {
                 "observation": processed_obs[role],
                 "observation_type": self.env.obs_type(),
@@ -311,10 +317,12 @@ class TaskEnvNode(BaseNode[JsonObj, JsonObj]):
                 f"{self.env_uuid}/{role}/observation",
                 Message[JsonObj](data=JsonObj(object=payload)).model_dump_json(),
             )
-
+        print("="*20,"after initial observation broadcast","="*20)
         await asyncio.sleep(1)
         self.last_step_timestamp = time.time()
+        print("="*20,"before super().event_loop()","="*20)
         await super().event_loop()
+        print("="*20,"end of TaskEnvNode event_loop","="*20+'\n')
 
     async def event_handler(
         self, input_channel: str, input_message: Message[JsonObj]

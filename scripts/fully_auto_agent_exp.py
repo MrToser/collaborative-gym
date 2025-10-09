@@ -117,7 +117,8 @@ def run_experiments(args, env_config_dir, config_template, runner, team_member_c
             disable_collaboration=True,
             add_tick=False,
         )
-        
+        print("%"*20,"after runner.start_session","%"*20)
+        print("len(runner.subprocesses):",len(runner.subprocesses))
         for node_process in runner.subprocesses:
             node_process.wait()
         

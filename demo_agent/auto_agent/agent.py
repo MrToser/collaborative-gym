@@ -227,8 +227,9 @@ if __name__ == "__main__":
         os.environ[k] = secrets[k]
 
     lm_kwargs = prepare_lm_kwargs(args.model_name)
+    print("Before LitellmModel lm_kwargs:",lm_kwargs)
     lm = LitellmModel(**lm_kwargs)
-
+    print("&"*20,"In agent main","&"*20)
     if args.debug:
         agent = ReactAutoAgent(
             lm=lm, add_task_demo=args.add_task_demo, prompt_path=args.prompt_path

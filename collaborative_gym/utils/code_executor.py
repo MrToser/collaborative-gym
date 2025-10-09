@@ -125,7 +125,7 @@ class CustomDockerJupyterServer(DockerJupyterServer):
             device_requests=device_requests,
             network=outer_net,
         )
-        _wait_for_ready(container)
+        _wait_for_ready(container,stop_time=2)
         inner_ip = container.attrs["NetworkSettings"]["Networks"][outer_net]["IPAddress"]
         print(f"内层容器 IP: {inner_ip}")
         self.inner_ip = inner_ip
