@@ -17,6 +17,8 @@ from collaborative_gym.runner import Runner
 from collaborative_gym.utils.string import make_string_green
 
 
+logger = Logger()
+    
 TABULAR_ANALYSIS_CONFIG_TEMPLATE = """env_class = "tabular_analysis"
 
 [env_args]
@@ -90,13 +92,21 @@ def init_runner(work_dir, task, result_dir_tag):
 
 
 def register_exit_signals(runner):
+    is_cleaning = False
     def handle_exit_signal(signum, frame):
+        nonlocal is_cleaning
+        if is_cleaning:
+            return
+        is_cleaning = True
         runner.cleanup_subprocesses()
+        logger.info("Cleaned up subprocesses. Exiting now.")
         sys.exit(0)
 
     atexit.register(runner.cleanup_subprocesses)
-    signal.signal(signal.SIGINT, handle_exit_signal)
-    signal.signal(signal.SIGTERM, handle_exit_signal)
+    for sig in [signal.SIGINT, signal.SIGTERM, signal.SIGHUP, signal.SIGQUIT]:
+        signal.signal(sig, handle_exit_signal)
+    # signal.signal(signal.SIGINT, handle_exit_signal)
+    # signal.signal(signal.SIGTERM, handle_exit_signal)
 
 
 def run_experiments(args, env_config_dir, config_template, runner, team_member_config):
@@ -129,7 +139,6 @@ def run_experiments(args, env_config_dir, config_template, runner, team_member_c
 
 
 def main():
-    logger = Logger()
     logger.info("Logger initialized for fully autonomous agent experiments.")
     
     

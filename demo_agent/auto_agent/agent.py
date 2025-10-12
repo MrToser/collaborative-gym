@@ -99,6 +99,7 @@ class ReactAutoAgent:
 
         This function will be called by collaborative_gym.nodes_agent_interface when the agent is started.
         """
+        print("&"*15,"In agent start","&"*15)
         self.name = name
         # This is a fully autonomous agent, so it does not use `team_members`.
         self.task_description = task_description
@@ -125,6 +126,7 @@ class ReactAutoAgent:
         This function will be called by collaborative_gym.nodes_agent_interface when the node receives a new observation from
         the environment.
         """
+        print("&"*15,"In ReactAutoAgent agent get_action","&"*15)
         # Update the scratchpad
         scratchpad_update_prompt = self.format_update_scratchpad_prompt(obs=observation)
         scratchpad_update_prompt_response = self.lm(
@@ -163,7 +165,7 @@ class ReactAutoAgent:
 
         logger.info(f"Fully Autonomous Agent action: {action}")
         self.action_history.append(action)
-
+        print("&"*15,"Exit ReactAutoAgent agent get_action","&"*15)
         return action
 
     def end(self, result_dir: str):
@@ -229,7 +231,7 @@ if __name__ == "__main__":
     lm_kwargs = prepare_lm_kwargs(args.model_name)
     print("Before LitellmModel lm_kwargs:",lm_kwargs)
     lm = LitellmModel(**lm_kwargs)
-    print("&"*20,"In agent main","&"*20)
+    print("&"*20,"In ReactAutoAgent agent.py main","&"*20)
     if args.debug:
         agent = ReactAutoAgent(
             lm=lm, add_task_demo=args.add_task_demo, prompt_path=args.prompt_path
@@ -256,3 +258,4 @@ if __name__ == "__main__":
             ),
             args.redis_url,
         )
+    print("&"*20,"Exit ReactAutoAgent agent.py main","&"*20)

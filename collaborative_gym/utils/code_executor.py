@@ -99,15 +99,22 @@ class CustomDockerJupyterServer(DockerJupyterServer):
         env.update(docker_env)
         # New code to mount a local directory to the container starts here
         volumes = {}
+        
         if local_directory:
             if not os.path.exists(local_directory):
                 os.makedirs(local_directory)
             os.chmod(local_directory, 0o777)  # Ensure the directory is writable.
+            raw_local_directory = local_directory
             container_directory = (
-                container_directory or "/root/collaborative-gym"
+                container_directory or "/home/jovyan/work"
             )  # Default directory.
+            local_directory = local_directory.replace(
+                "/root/autodl-tmp",
+                "/data_nvme/privatecloud/data/autodl-container-6c4642a0d1-f7a79d5c-storage"
+            )
             volumes[local_directory] = {"bind": container_directory, "mode": "rw"}
         self.volumes = volumes
+        print("self.volumes:", self.volumes)
         # New code to mount a local directory to the container ends here
         # sjh add
         outer = client.containers.get(socket.gethostname())
@@ -125,6 +132,7 @@ class CustomDockerJupyterServer(DockerJupyterServer):
             device_requests=device_requests,
             network=outer_net,
         )
+        self.volumes[raw_local_directory] = {"bind": container_directory, "mode": "rw"}
         _wait_for_ready(container,stop_time=2)
         inner_ip = container.attrs["NetworkSettings"]["Networks"][outer_net]["IPAddress"]
         print(f"内层容器 IP: {inner_ip}")

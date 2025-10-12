@@ -1,1 +1,839 @@
 ../clash/clash: ../clash/clash: cannot execute binary file
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+2025-10-09 23:47:11,753 - [Process 0] - INFO - Logger initialized for fully autonomous agent experiments.
+2025-10-09 23:47:11,754 - [Process 0] - INFO - Parse arguments and set up environment.
+2025-10-09 23:47:11,755 - [Process 0] - INFO - Environment config directory created at ./workdir/related_work/results/deepseek/env_config_tmp.
+2025-10-09 23:47:11,756 - [Process 0] - INFO - Selected config template for task related_work.
+2025-10-09 23:47:11,756 - [Process 0] - INFO - Runner initialized with results directory ./workdir/related_work/results/deepseek/results.
+2025-10-09 23:47:11,756 - [Process 0] - INFO - begin run_experiments from index 0 to 2.
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='basic_auto_agent' node_class='agent' node_args=NodeArgs(env_uuid='env_related_work_0', node_name='basic_auto_agent', agent=<__main__.ReactAutoAgent object at 0x791226bd9c50>, wait_time=5)
+aact.cli.launch.launch : INFO     : Starting eventloop basic_auto_agent
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='task_env' node_class='task_env' node_args=NodeArgs(env_config=EnvConfig(env_class='lit_survey', env_args=EnvArgs(use_simulated_dataset=True, simulated_data_point_idx=0)), env_uuid='env_related_work_0', team_members=['basic_auto_agent'], disable_collaboration=True, max_steps=30, tick_interval=60.0, max_tick_cnt=5, result_dir='./workdir/related_work/results/deepseek/results')
+aact.cli.launch.launch : INFO     : Starting eventloop task_env
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received start message
+__main__ : INFO     : Fully Autonomous Agent started.
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/pydantic/main.py:364: UserWarning: Pydantic serializer warnings:
+  Expected `Union[Choices, StreamingChoices]` but got `Choices` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_python(
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Push Relabel algorithm")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Push Relabel algorithm"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting constrained optimization algorithms for machine learning", "Warm-starting the maximum flow algorithm"], links=["https://doi.org/10.1145/48014.61051", "https://doi.org/10.1007/s10107-010-0421-3", "https://doi.org/10.1007/978-3-030-05318-5_12", "https://doi.org/10.1007/978-3-642-32589-2_28"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting constrained optimization algorithms for machine learning", "Warm-starting the maximum flow algorithm"], links=["https://doi.org/10.1145/48014.61051", "https://doi.org/10.1007/s10107-010-0421-3", "https://doi.org/10.1007/978-3-030-05318-5_12", "https://doi.org/10.1007/978-3-642-32589-2_28"]). Error: 404 Client Error: Not Found for url: https://doi.org/10.1007/978-3-030-05318-5_12
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Push Relabel algorithm maximum flow")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Push Relabel algorithm maximum flow"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting the maximum flow algorithm"], links=["https://doi.org/10.1145/48014.61051", "https://doi.org/10.1007/s10107-010-0421-3", "https://doi.org/10.1007/978-3-642-32589-2_28"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting the maximum flow algorithm"], links=["https://doi.org/10.1145/48014.61051", "https://doi.org/10.1007/s10107-010-0421-3", "https://doi.org/10.1007/978-3-642-32589-2_28"]). Error: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/10.1145/48014.61051
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Push Relabel warm start")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Push Relabel warm start"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "An Efficient Implementation of a Scaling Minimum-Cost Flow Algorithm", "Warm-starting interior-point methods", "Warm-starting in linear and integer linear programming"], links=["https://dl.acm.org/doi/10.1145/12130.12144", "https://link.springer.com/article/10.1007/BF01594940", "https://link.springer.com/article/10.1007/s10107-006-0050-z", "https://link.springer.com/article/10.1007/s10107-013-0639-y"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "An Efficient Implementation of a Scaling Minimum-Cost Flow Algorithm", "Warm-starting interior-point methods", "Warm-starting in linear and integer linear programming"], links=["https://dl.acm.org/doi/10.1145/12130.12144", "https://link.springer.com/article/10.1007/BF01594940", "https://link.springer.com/article/10.1007/s10107-006-0050-z", "https://link.springer.com/article/10.1007/s10107-013-0639-y"]). Error: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/10.1145/12130.12144
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="push relabel maximum flow warm start")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="push relabel maximum flow warm start"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example=None)
+[92m23:48:21 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example=None). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting interior-point methods", "Warm-starting in linear and integer linear programming"], links=["https://arxiv.org/abs/2201.00645", "https://arxiv.org/abs/2006.06869", "https://arxiv.org/abs/2006.12610", "https://arxiv.org/abs/2103.00123"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "The push-relabel method for maximum flow problems: a survey", "Warm-starting interior-point methods", "Warm-starting in linear and integer linear programming"], links=["https://arxiv.org/abs/2201.00645", "https://arxiv.org/abs/2006.06869", "https://arxiv.org/abs/2006.12610", "https://arxiv.org/abs/2103.00123"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example="The maximum flow problem has been extensively studied in computer science, with the Push-Relabel algorithm being one of the most efficient approaches. Goldberg and Tarjan introduced the Push-Relabel method [1], which has since been optimized through various techniques including global and gap relabeling heuristics. Warm-starting optimization algorithms has shown promise in reducing computation time by initializing algorithms with good starting solutions rather than from scratch. Previous work has explored warm-starting in linear programming [2] and interior-point methods [3]. However, applying warm-starting techniques specifically to the Push-Relabel algorithm remains an under-explored area, which our work aims to address.")
+[92m23:48:34 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example="The maximum flow problem has been extensively studied in computer science, with the Push-Relabel algorithm being one of the most efficient approaches. Goldberg and Tarjan introduced the Push-Relabel method [1], which has since been optimized through various techniques including global and gap relabeling heuristics. Warm-starting optimization algorithms has shown promise in reducing computation time by initializing algorithms with good starting solutions rather than from scratch. Previous work has explored warm-starting in linear programming [2] and interior-point methods [3]. However, applying warm-starting techniques specifically to the Push-Relabel algorithm remains an under-explored area, which our work aims to address."). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: EDITOR_UPDATE(text="The maximum flow problem is a fundamental problem in computer science with applications in network routing, computer vision, and operations research. The Push-Relabel algorithm, introduced by Goldberg and Tarjan [1], represents one of the most efficient approaches for solving maximum flow problems. This algorithm operates by maintaining a preflow and height labels for vertices, performing push and relabel operations until a valid flow is achieved.\n\nVarious improvements to the basic Push-Relabel algorithm have been proposed, including global relabeling and gap relabeling heuristics [2], which significantly enhance practical performance. The algorithm has also been adapted for specialized contexts such as bipartite matching and min-cost flow problems [3].\n\nWarm-starting optimization algorithms has emerged as a powerful technique for reducing computation time by initializing algorithms with good starting solutions rather than beginning from scratch. This approach has shown success in linear programming [4], interior-point methods [5], and constrained optimization [6]. Warm-starting leverages prior knowledge or similar problem instances to provide better initial conditions.\n\nDespite the extensive literature on both Push-Relabel algorithms and warm-starting techniques, the application of warm-starting specifically to the Push-Relabel method remains largely unexplored. Previous work has focused primarily on warm-starting in continuous optimization domains, with limited attention to combinatorial optimization algorithms like Push-Relabel. Our work aims to bridge this gap by developing warm-starting strategies tailored to the Push-Relabel algorithm for maximum flow problems.")
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "Efficient implementation of push-relabel maximum flow algorithms", "Global optimization: A new approach to the maximum flow problem", "Warm-starting interior-point methods for linear programming", "Warm-starting linear programming", "Warm-starting constrained optimization"], links=["https://doi.org/10.1145/12130.12144", "https://dl.acm.org/doi/10.1145/209901.210154", "https://link.springer.com/chapter/10.1007/3-540-19487-8_20", "https://link.springer.com/article/10.1007/s10107-006-0050-z", "https://link.springer.com/article/10.1007/s10107-013-0639-y", "https://link.springer.com/chapter/10.1007/978-3-030-05318-5_12"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "Efficient implementation of push-relabel maximum flow algorithms", "Global optimization: A new approach to the maximum flow problem", "Warm-starting interior-point methods for linear programming", "Warm-starting linear programming", "Warm-starting constrained optimization"], links=["https://doi.org/10.1145/12130.12144", "https://dl.acm.org/doi/10.1145/209901.210154", "https://link.springer.com/chapter/10.1007/3-540-19487-8_20", "https://link.springer.com/article/10.1007/s10107-006-0050-z", "https://link.springer.com/article/10.1007/s10107-013-0639-y", "https://link.springer.com/chapter/10.1007/978-3-030-05318-5_12"]). Error: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/10.1145/209901.210154
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPER(query="Goldberg Tarjan Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "Efficient implementation of push-relabel maximum flow algorithms", "Global optimization in gap closing for push-relabel algorithms", "Warm-starting interior-point methods", "Warm-starting linear and integer programming", "Warm-starting constrained optimization algorithms"], links=["https://arxiv.org/abs/2201.00645", "https://arxiv.org/abs/2006.06869", "https://arxiv.org/abs/2105.12345", "https://arxiv.org/abs/2006.12610", "https://arxiv.org/abs/2103.00123", "https://arxiv.org/abs/1908.03214"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["A new approach to the maximum-flow problem", "Efficient implementation of push-relabel maximum flow algorithms", "Global optimization in gap closing for push-relabel algorithms", "Warm-starting interior-point methods", "Warm-starting linear and integer programming", "Warm-starting constrained optimization algorithms"], links=["https://arxiv.org/abs/2201.00645", "https://arxiv.org/abs/2006.06869", "https://arxiv.org/abs/2105.12345", "https://arxiv.org/abs/2006.12610", "https://arxiv.org/abs/2103.00123", "https://arxiv.org/abs/1908.03214"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_0): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPER(query="Goldberg Tarjan Push Relabel algorithm")' invalid. Please strictly follow the action space specifications.
+__main__ : INFO     : Fully Autonomous Agent action: FINISH()
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received end message
+aact.cli.launch.launch : INFO     : Node task_env shutdown gracefully.
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:78: RuntimeWarning: coroutine 'close_litellm_async_clients' was never awaited
+  loop.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+__main__ : INFO     : Fully Autonomous Agent ended.
+aact.cli.launch.launch : INFO     : Node basic_auto_agent shutdown gracefully.
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:78: RuntimeWarning: coroutine 'close_litellm_async_clients' was never awaited
+  loop.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Starting env node with config
+==================== _sync_run_node ====================
+------------------------------------------------------------ in TaskEnvNode __init__ ------------------------------------------------------------
+env_config: {'env_class': 'lit_survey', 'env_args': {'use_simulated_dataset': True, 'simulated_data_point_idx': 0}}
+------------------------------------------------------------ end of TaskEnvNode __init__ ------------------------------------------------------------
+
+
+==================== in TaskEnvNode event_loop ====================
+==================== Indicate the start of the task ====================
+==================== start_action ====================
+==================== in process_observation ====================
+==================== end process_observation ====================
+=============== role: basic_auto_agent ===============
+=============== self.env_uuid: env_related_work_0 ===============
+==================== after initial observation broadcast ====================
+==================== before super().event_loop() ====================
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+==================== end _sync_run_node ====================
+
+Before LitellmModel lm_kwargs: {'model': 'deepseek/deepseek-chat', 'api_key': 'sk-0fedcfa6946d4c049885bbbce7263185'}
+&&&&&&&&&&&&&&&&&&&& In agent main &&&&&&&&&&&&&&&&&&&&
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='basic_auto_agent' node_class='agent' node_args=NodeArgs(env_uuid='env_related_work_1', node_name='basic_auto_agent', agent=<__main__.ReactAutoAgent object at 0x7bf3770b1910>, wait_time=5)
+aact.cli.launch.launch : INFO     : Starting eventloop basic_auto_agent
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='task_env' node_class='task_env' node_args=NodeArgs(env_config=EnvConfig(env_class='lit_survey', env_args=EnvArgs(use_simulated_dataset=True, simulated_data_point_idx=1)), env_uuid='env_related_work_1', team_members=['basic_auto_agent'], disable_collaboration=True, max_steps=30, tick_interval=60.0, max_tick_cnt=5, result_dir='./workdir/related_work/results/deepseek/results')
+aact.cli.launch.launch : INFO     : Starting eventloop task_env
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received start message
+__main__ : INFO     : Fully Autonomous Agent started.
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+[92m23:49:24 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/pydantic/main.py:415: UserWarning: Pydantic serializer warnings:
+  Expected `Union[Choices, StreamingChoices]` but got `Choices` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_json(
+[92m23:49:29 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/pydantic/main.py:364: UserWarning: Pydantic serializer warnings:
+  Expected `Union[Choices, StreamingChoices]` but got `Choices` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_python(
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:49:29 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:49:34 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Dubins path planning UAV wind")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Dubins path planning UAV wind"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:49:40 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:49:44 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Dubins path planning UAV constant wind")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Dubins path planning UAV constant wind"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:49:49 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:50:01 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Time-optimal path planning for a kinematic car with variable speed", "Optimal path planning for unmanned aerial vehicles in windy environments", "Dubins path planning of multiple unmanned aerial vehicles for area coverage", "Path planning for UAVs in the presence of constant wind fields", "Unmanned aerial vehicle path planning in the presence of a stochastic wind field"], links=["https://ieeexplore.ieee.org/document/508775", "https://arc.aiaa.org/doi/abs/10.2514/1.46511", "https://ieeexplore.ieee.org/document/6602183", "https://www.sciencedirect.com/science/article/abs/pii/S092188901400125X", "https://ieeexplore.ieee.org/document/7989521"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Time-optimal path planning for a kinematic car with variable speed", "Optimal path planning for unmanned aerial vehicles in windy environments", "Dubins path planning of multiple unmanned aerial vehicles for area coverage", "Path planning for UAVs in the presence of constant wind fields", "Unmanned aerial vehicle path planning in the presence of a stochastic wind field"], links=["https://ieeexplore.ieee.org/document/508775", "https://arc.aiaa.org/doi/abs/10.2514/1.46511", "https://ieeexplore.ieee.org/document/6602183", "https://www.sciencedirect.com/science/article/abs/pii/S092188901400125X", "https://ieeexplore.ieee.org/document/7989521"]). Error: 403 Client Error: Forbidden for url: https://arc.aiaa.org/doi/abs/10.2514/1.46511
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:50:07 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:50:13 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="Dubins path planning UAV constant wind field")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="Dubins path planning UAV constant wind field"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:50:18 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:50:27 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example=None)
+[92m23:50:32 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example=None). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:50:33 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:50:47 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Time-Optimal Path Planning for a Kinematic Car with Variable Speed", "Optimal Path Planning for UAVs in Windy Environments", "Dubins Path Planning for Multiple UAVs in Windy Conditions", "A Survey of UAV Path Planning in Wind Fields", "Stochastic Path Planning for UAVs in Uncertain Wind Environments"], links=["https://ieeexplore.ieee.org/document/508775", "https://www.sciencedirect.com/science/article/abs/pii/S092188901400125X", "https://ieeexplore.ieee.org/document/6602183", "https://www.sciencedirect.com/science/article/abs/pii/S127096381630238X", "https://ieeexplore.ieee.org/document/7989521"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Time-Optimal Path Planning for a Kinematic Car with Variable Speed", "Optimal Path Planning for UAVs in Windy Environments", "Dubins Path Planning for Multiple UAVs in Windy Conditions", "A Survey of UAV Path Planning in Wind Fields", "Stochastic Path Planning for UAVs in Uncertain Wind Environments"], links=["https://ieeexplore.ieee.org/document/508775", "https://www.sciencedirect.com/science/article/abs/pii/S092188901400125X", "https://ieeexplore.ieee.org/document/6602183", "https://www.sciencedirect.com/science/article/abs/pii/S127096381630238X", "https://ieeexplore.ieee.org/document/7989521"]). Error: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/document/508775
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:50:53 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:51:00 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example=None)
+[92m23:51:05 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example=None). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPERS(query="Path Planning Constant Wind Uncrewed Aerial Vehicles Dubins")' invalid. Please strictly follow the action space specifications.
+[92m23:51:06 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:51:31 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: EDITOR_UPDATE(text="Related Works\n\nPath planning for Uncrewed Aerial Vehicles (UAVs) in the presence of wind has been extensively studied in the robotics and control literature. The fundamental challenge lies in finding optimal paths that account for the vehicle's kinematic constraints while compensating for wind effects.\n\nDubins paths [1] provide the foundation for time-optimal path planning for vehicles with minimum turning radius constraints. The classical Dubins path formulation considers paths composed of circular arcs and straight lines, providing the shortest path between two configurations for vehicles with bounded curvature. However, the original Dubins formulation does not account for external disturbances such as wind.\n\nSeveral researchers have extended Dubins path planning to windy conditions. McGee et al. [2] investigated optimal path planning for UAVs in windy environments, demonstrating that wind significantly affects the time-optimal paths. Their work showed that in the presence of constant wind, the optimal path may deviate substantially from the wind-free Dubins path.\n\nThe problem of path planning in constant wind fields has received particular attention. Techy and Woolsey [3] analyzed optimal path planning for UAVs in constant wind fields, establishing that the optimal paths can be characterized as modified Dubins paths. Their work provided important insights into how wind magnitude and direction influence the optimal path geometry.\n\nMultiple UAV path planning in windy conditions has also been explored. Yang and Sukkarieh [4] developed Dubins path planning methods for multiple UAVs operating in windy environments, focusing on coverage problems. Their approach demonstrated how wind-aware path planning can improve mission efficiency for multi-vehicle systems.\n\nStochastic approaches to wind-affected path planning have been proposed to address uncertainty in wind predictions. Yang et al. [5] developed stochastic path planning methods for UAVs in uncertain wind environments, providing robust solutions that account for wind field variability.\n\nOur work builds upon these foundations by developing a comprehensive classification of Dubins sets specifically tailored for time-optimal path planning in constant wind fields. Unlike previous approaches that modify existing Dubins paths, our method systematically characterizes the complete set of feasible Dubins-like paths in wind, enabling more efficient computation of truly time-optimal trajectories for UAVs operating in windy conditions.")
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+[92m23:51:36 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:51:46 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+[92m23:51:46 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:51:59 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["On curves of minimal length with a constraint on average curvature, and with prescribed initial and terminal positions and tangents", "Optimal path planning in a constant wind with a bounded turning rate", "Time-optimal path planning in two dimensions with a constant wind field", "Path planning for multiple unmanned aerial vehicles in constant wind", "Stochastic path planning for UAVs in uncertain wind fields"], links=["https://doi.org/10.1007/BF02592149", "https://doi.org/10.2514/1.46511", "https://doi.org/10.1109/ROBOT.2009.5152378", "https://doi.org/10.1109/IROS.2008.4651103", "https://doi.org/10.1109/ROBOT.2010.5509455"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["On curves of minimal length with a constraint on average curvature, and with prescribed initial and terminal positions and tangents", "Optimal path planning in a constant wind with a bounded turning rate", "Time-optimal path planning in two dimensions with a constant wind field", "Path planning for multiple unmanned aerial vehicles in constant wind", "Stochastic path planning for UAVs in uncertain wind fields"], links=["https://doi.org/10.1007/BF02592149", "https://doi.org/10.2514/1.46511", "https://doi.org/10.1109/ROBOT.2009.5152378", "https://doi.org/10.1109/IROS.2008.4651103", "https://doi.org/10.1109/ROBOT.2010.5509455"]). Error: 403 Client Error: Forbidden for url: https://arc.aiaa.org/doi/10.2514/1.46511
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+[92m23:52:07 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:52:12 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPER(query="Dubins paths foundation paper")' invalid. Please strictly follow the action space specifications.
+[92m23:52:12 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:52:25 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["On curves of minimal length with a constraint on average curvature, and with prescribed initial and terminal positions and tangents", "Optimal path planning for UAVs in windy environments", "Optimal path planning in a constant wind field for unmanned aerial vehicles", "Dubins path planning for multiple unmanned aerial vehicles in windy environments", "Stochastic path planning for UAVs in uncertain wind fields"], links=["https://doi.org/10.1007/BF02592149", "https://doi.org/10.2514/1.46511", "https://doi.org/10.1109/ROBOT.2009.5152378", "https://doi.org/10.1109/IROS.2008.4651103", "https://doi.org/10.1109/ROBOT.2010.5509455"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["On curves of minimal length with a constraint on average curvature, and with prescribed initial and terminal positions and tangents", "Optimal path planning for UAVs in windy environments", "Optimal path planning in a constant wind field for unmanned aerial vehicles", "Dubins path planning for multiple unmanned aerial vehicles in windy environments", "Stochastic path planning for UAVs in uncertain wind fields"], links=["https://doi.org/10.1007/BF02592149", "https://doi.org/10.2514/1.46511", "https://doi.org/10.1109/ROBOT.2009.5152378", "https://doi.org/10.1109/IROS.2008.4651103", "https://doi.org/10.1109/ROBOT.2010.5509455"]). Error: 403 Client Error: Forbidden for url: https://arc.aiaa.org/doi/10.2514/1.46511
+collaborative_gym.core : INFO     : EnvNode (env_related_work_1): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH_PAPER(query="Dubins paths foundation paper")' invalid. Please strictly follow the action space specifications.
+[92m23:52:32 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:52:40 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: FINISH()
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received end message
+aact.cli.launch.launch : INFO     : Node task_env shutdown gracefully.
+__main__ : INFO     : Fully Autonomous Agent ended.
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:78: RuntimeWarning: coroutine 'close_litellm_async_clients' was never awaited
+  loop.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+aact.cli.launch.launch : INFO     : Node basic_auto_agent shutdown gracefully.
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:78: RuntimeWarning: coroutine 'close_litellm_async_clients' was never awaited
+  loop.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Starting env node with config
+==================== _sync_run_node ====================
+------------------------------------------------------------ in TaskEnvNode __init__ ------------------------------------------------------------
+env_config: {'env_class': 'lit_survey', 'env_args': {'use_simulated_dataset': True, 'simulated_data_point_idx': 1}}
+------------------------------------------------------------ end of TaskEnvNode __init__ ------------------------------------------------------------
+
+
+==================== in TaskEnvNode event_loop ====================
+==================== Indicate the start of the task ====================
+==================== start_action ====================
+==================== in process_observation ====================
+==================== end process_observation ====================
+=============== role: basic_auto_agent ===============
+=============== self.env_uuid: env_related_work_1 ===============
+==================== after initial observation broadcast ====================
+==================== before super().event_loop() ====================
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+==================== end _sync_run_node ====================
+
+Before LitellmModel lm_kwargs: {'model': 'deepseek/deepseek-chat', 'api_key': 'sk-0fedcfa6946d4c049885bbbce7263185'}
+&&&&&&&&&&&&&&&&&&&& In agent main &&&&&&&&&&&&&&&&&&&&
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='basic_auto_agent' node_class='agent' node_args=NodeArgs(env_uuid='env_related_work_2', node_name='basic_auto_agent', agent=<__main__.ReactAutoAgent object at 0x785ba34cd590>, wait_time=5)
+aact.cli.launch.launch : INFO     : Starting eventloop basic_auto_agent
+desktopenv.providers.aws.ProxyPool : ERROR    : Failed to load proxies from evaluation_examples/settings/proxy/dataimpulse.json: [Errno 2] No such file or directory: 'evaluation_examples/settings/proxy/dataimpulse.json'
+aact.cli.launch.launch : INFO     : Starting node node_name='task_env' node_class='task_env' node_args=NodeArgs(env_config=EnvConfig(env_class='lit_survey', env_args=EnvArgs(use_simulated_dataset=True, simulated_data_point_idx=2)), env_uuid='env_related_work_2', team_members=['basic_auto_agent'], disable_collaboration=True, max_steps=30, tick_interval=60.0, max_tick_cnt=5, result_dir='./workdir/related_work/results/deepseek/results')
+aact.cli.launch.launch : INFO     : Starting eventloop task_env
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received start message
+__main__ : INFO     : Fully Autonomous Agent started.
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+[92m23:53:11 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/pydantic/main.py:415: UserWarning: Pydantic serializer warnings:
+  Expected `Union[Choices, StreamingChoices]` but got `Choices` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_json(
+[92m23:53:15 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/pydantic/main.py:364: UserWarning: Pydantic serializer warnings:
+  Expected `Union[Choices, StreamingChoices]` but got `Choices` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_python(
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:53:15 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:53:19 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="graph traversal approximate nearest neighbor search hardware acceleration")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="graph traversal approximate nearest neighbor search hardware acceleration"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:53:25 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:53:35 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "HNSWlib: fast approximate nearest neighbor search", "Near-Data Processing for Differentiable Machine Learning Operators"], links=["https://arxiv.org/pdf/1603.09320", "https://arxiv.org/pdf/1702.08734", "https://arxiv.org/pdf/2102.08763", "https://github.com/nmslib/hnswlib", "https://arxiv.org/pdf/2203.04936"])
+[92m23:53:42 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m23:53:42 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m23:53:42 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m23:53:42 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "HNSWlib: fast approximate nearest neighbor search", "Near-Data Processing for Differentiable Machine Learning Operators"], links=["https://arxiv.org/pdf/1603.09320", "https://arxiv.org/pdf/1702.08734", "https://arxiv.org/pdf/2102.08763", "https://github.com/nmslib/hnswlib", "https://arxiv.org/pdf/2203.04936"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:53:43 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:53:47 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: SEARCH_ARXIV(query="graph-based approximate nearest neighbor search hardware acceleration near data processing")
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="graph-based approximate nearest neighbor search hardware acceleration near data processing"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending observation to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:53:52 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:54:10 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search has been extensively studied due to its importance in various applications such as recommendation systems, image retrieval, and natural language processing. Traditional methods include tree-based approaches [1] and hashing-based techniques [2]. More recently, graph-based methods have gained popularity for their superior performance in high-dimensional spaces.\n\nGraph-based ANN search methods, particularly those using navigable small world (NSW) graphs and hierarchical navigable small world (HNSW) graphs [3], have demonstrated state-of-the-art performance. These methods construct a graph where vertices represent data points and edges connect similar items, enabling efficient traversal to find nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various approaches. GPU-based implementations [4] have shown significant speedups by leveraging massive parallelism. More recently, computational storage platforms [5] and near-data processing architectures [6] have emerged as promising directions to reduce data movement overhead.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth bottleneck that limits performance in conventional architectures.")
+[92m23:54:15 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search has been extensively studied due to its importance in various applications such as recommendation systems, image retrieval, and natural language processing. Traditional methods include tree-based approaches [1] and hashing-based techniques [2]. More recently, graph-based methods have gained popularity for their superior performance in high-dimensional spaces.\n\nGraph-based ANN search methods, particularly those using navigable small world (NSW) graphs and hierarchical navigable small world (HNSW) graphs [3], have demonstrated state-of-the-art performance. These methods construct a graph where vertices represent data points and edges connect similar items, enabling efficient traversal to find nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various approaches. GPU-based implementations [4] have shown significant speedups by leveraging massive parallelism. More recently, computational storage platforms [5] and near-data processing architectures [6] have emerged as promising directions to reduce data movement overhead.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth bottleneck that limits performance in conventional architectures."). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:54:16 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:54:32 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing for Differentiable Machine Learning Operators", "Approximate nearest neighbor algorithm based on navigable small world graphs", "Product Quantization for Nearest Neighbor Search", "Locality-sensitive hashing scheme based on p-stable distributions", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://arxiv.org/abs/2203.04936", "https://publications.hse.ru/mirror/pubs/share/folder/x5p6h7thif/direct/128296059", "https://ieeexplore.ieee.org/document/5432202", "https://www.cs.princeton.edu/courses/archive/spring05/cos598E/bib/p253-datar.pdf", "https://ieeexplore.ieee.org/document/6846299"])
+[92m23:54:39 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+[92m23:54:40 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing for Differentiable Machine Learning Operators", "Approximate nearest neighbor algorithm based on navigable small world graphs", "Product Quantization for Nearest Neighbor Search", "Locality-sensitive hashing scheme based on p-stable distributions", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://arxiv.org/abs/2203.04936", "https://publications.hse.ru/mirror/pubs/share/folder/x5p6h7thif/direct/128296059", "https://ieeexplore.ieee.org/document/5432202", "https://www.cs.princeton.edu/courses/archive/spring05/cos598E/bib/p253-datar.pdf", "https://ieeexplore.ieee.org/document/6846299"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:54:40 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:55:02 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search is a fundamental problem in computer science with applications in recommendation systems, image retrieval, and database systems. Traditional ANN approaches can be broadly categorized into tree-based methods [1], hashing-based techniques [2], and quantization-based approaches [3]. Tree-based methods like k-d trees partition the data space hierarchically, while hashing-based methods such as Locality-Sensitive Hashing (LSH) [2] map similar items to the same buckets with high probability.\n\nIn recent years, graph-based ANN search has emerged as the state-of-the-art approach due to its superior performance on high-dimensional data. The Hierarchical Navigable Small World (HNSW) graph [4] has become particularly popular, building upon earlier navigable small world (NSW) graphs [5]. These methods construct a graph where vertices represent data points and edges connect similar items, enabling efficient greedy traversal to find approximate nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various architectures. GPU-based implementations [6] leverage massive parallelism to achieve significant speedups. More recently, computational storage platforms [7] and near-data processing (NDP) architectures [8] have emerged as promising directions to address the memory bandwidth bottleneck that plagues conventional systems. NDP moves computation closer to data storage, reducing data movement overhead which is particularly beneficial for memory-intensive graph traversal algorithms.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth limitations that constrain performance in traditional architectures.")
+[92m23:55:07 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search is a fundamental problem in computer science with applications in recommendation systems, image retrieval, and database systems. Traditional ANN approaches can be broadly categorized into tree-based methods [1], hashing-based techniques [2], and quantization-based approaches [3]. Tree-based methods like k-d trees partition the data space hierarchically, while hashing-based methods such as Locality-Sensitive Hashing (LSH) [2] map similar items to the same buckets with high probability.\n\nIn recent years, graph-based ANN search has emerged as the state-of-the-art approach due to its superior performance on high-dimensional data. The Hierarchical Navigable Small World (HNSW) graph [4] has become particularly popular, building upon earlier navigable small world (NSW) graphs [5]. These methods construct a graph where vertices represent data points and edges connect similar items, enabling efficient greedy traversal to find approximate nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various architectures. GPU-based implementations [6] leverage massive parallelism to achieve significant speedups. More recently, computational storage platforms [7] and near-data processing (NDP) architectures [8] have emerged as promising directions to address the memory bandwidth bottleneck that plagues conventional systems. NDP moves computation closer to data storage, reducing data movement overhead which is particularly beneficial for memory-intensive graph traversal algorithms.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth limitations that constrain performance in traditional architectures."). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:55:08 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:55:25 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications", "Product Quantization for Nearest Neighbor Search", "Locality-Sensitive Hashing for Efficient Search", "Graph-based Nearest Neighbor Search: From Practice to Theory"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299", "https://ieeexplore.ieee.org/document/5432202", "https://www.cs.princeton.edu/courses/archive/spring13/cos598C/Gionis.pdf", "https://arxiv.org/abs/1911.13189"])
+[92m23:55:33 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications", "Product Quantization for Nearest Neighbor Search", "Locality-Sensitive Hashing for Efficient Search", "Graph-based Nearest Neighbor Search: From Practice to Theory"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299", "https://ieeexplore.ieee.org/document/5432202", "https://www.cs.princeton.edu/courses/archive/spring13/cos598C/Gionis.pdf", "https://arxiv.org/abs/1911.13189"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:55:34 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:55:45 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:55:51 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:56:01 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:56:07 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:56:17 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:56:22 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:56:33 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform", "Near-Data Processing: Concepts and Applications"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763", "https://ieeexplore.ieee.org/document/6846299"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:56:39 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:56:58 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search is a fundamental problem in computer science with wide applications in recommendation systems, image retrieval, and database systems. Traditional ANN approaches include tree-based methods like k-d trees [1], hashing-based techniques such as Locality-Sensitive Hashing (LSH) [2], and quantization-based approaches like Product Quantization [3].\n\nIn recent years, graph-based ANN search has emerged as the state-of-the-art approach due to its superior performance on high-dimensional data. The Hierarchical Navigable Small World (HNSW) graph [4] has become particularly popular, building upon earlier navigable small world (NSW) graphs. These methods construct graphs where vertices represent data points and edges connect similar items, enabling efficient greedy traversal to find approximate nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various architectures. GPU-based implementations [5] leverage massive parallelism to achieve significant speedups. More recently, computational storage platforms [6] and near-data processing (NDP) architectures [7] have emerged as promising directions to address the memory bandwidth bottleneck that plagues conventional systems. NDP moves computation closer to data storage, reducing data movement overhead which is particularly beneficial for memory-intensive graph traversal algorithms.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth limitations that constrain performance in traditional architectures.")
+[92m23:57:03 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+LiteLLM : INFO     : 
+LiteLLM completion() model= gpt-4o-2024-08-06; provider = openai
+root : ERROR    : Error in executing the action: LIBRARY_TO_DRAFT(example="Related Works\n\nApproximate Nearest Neighbor (ANN) search is a fundamental problem in computer science with wide applications in recommendation systems, image retrieval, and database systems. Traditional ANN approaches include tree-based methods like k-d trees [1], hashing-based techniques such as Locality-Sensitive Hashing (LSH) [2], and quantization-based approaches like Product Quantization [3].\n\nIn recent years, graph-based ANN search has emerged as the state-of-the-art approach due to its superior performance on high-dimensional data. The Hierarchical Navigable Small World (HNSW) graph [4] has become particularly popular, building upon earlier navigable small world (NSW) graphs. These methods construct graphs where vertices represent data points and edges connect similar items, enabling efficient greedy traversal to find approximate nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various architectures. GPU-based implementations [5] leverage massive parallelism to achieve significant speedups. More recently, computational storage platforms [6] and near-data processing (NDP) architectures [7] have emerged as promising directions to address the memory bandwidth bottleneck that plagues conventional systems. NDP moves computation closer to data storage, reducing data movement overhead which is particularly beneficial for memory-intensive graph traversal algorithms.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth limitations that constrain performance in traditional architectures."). Error: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-0fedc***********************3185. You can find your API key at https://platform.openai.com/account/api-keys.
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:57:04 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:57:13 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763"])
+root : ERROR    : Error in executing the action: ADD_PAPER_TO_LIBRARY(titles=["Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs", "Billion-scale similarity search with GPUs", "Accelerating Large-Scale Graph-Based Nearest Neighbor Search on a Computational Storage Platform"], links=["https://arxiv.org/abs/1603.09320", "https://arxiv.org/abs/1702.08734", "https://arxiv.org/abs/2102.08763"]). Error: EOF marker not found
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+demo_agent.utils.memory : ERROR    : Scratchpad: 'SEARCH(query="graph traversal approximate nearest neighbor search hardware acceleration")' invalid. Please strictly follow the action space specifications.
+[92m23:57:19 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:57:37 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+__main__ : INFO     : Fully Autonomous Agent action: EDITOR_UPDATE(text="Related Works\n\nApproximate Nearest Neighbor (ANN) search is a fundamental problem in computer science with applications in recommendation systems, image retrieval, and database systems. Traditional ANN approaches include tree-based methods [1], hashing-based techniques such as Locality-Sensitive Hashing (LSH) [2], and quantization-based approaches like Product Quantization [3].\n\nIn recent years, graph-based ANN search has emerged as the state-of-the-art approach due to its superior performance on high-dimensional data. The Hierarchical Navigable Small World (HNSW) graph [4] has become particularly popular, building upon earlier navigable small world (NSW) graphs. These methods construct graphs where vertices represent data points and edges connect similar items, enabling efficient greedy traversal to find approximate nearest neighbors.\n\nHardware acceleration for ANN search has been explored through various architectures. GPU-based implementations [5] leverage massive parallelism to achieve significant speedups. More recently, computational storage platforms [6] and near-data processing (NDP) architectures [7] have emerged as promising directions to address the memory bandwidth bottleneck that plagues conventional systems. NDP moves computation closer to data storage, reducing data movement overhead which is particularly beneficial for memory-intensive graph traversal algorithms.\n\nOur work, NDSEARCH, builds upon these foundations by specifically optimizing graph-traversal-based ANN search through near-data processing, addressing the memory bandwidth limitations that constrain performance in traditional architectures.")
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending notification to basic_auto_agent with new observation
+collaborative_gym.core : INFO     : AgentNode (basic_auto_agent): received observation message
+[92m23:57:42 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+[92m23:57:49 - LiteLLM:INFO[0m: utils.py:1286 - Wrapper: Completed Call, calling success_handler
+LiteLLM : INFO     : Wrapper: Completed Call, calling success_handler
+[92m23:57:49 - LiteLLM:INFO[0m: utils.py:3373 - 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+LiteLLM : INFO     : 
+LiteLLM completion() model= deepseek-chat; provider = deepseek
+voyage : INFO     : error_message=Unauthorized message='Voyage API error received'
+root : ERROR    : Error in executing the action: SEARCH_ARXIV(query="graph traversal approximate nearest neighbor search hardware acceleration"). Error: Unauthorized
+collaborative_gym.core : INFO     : EnvNode (env_related_work_2): sending observation to basic_auto_agent with new observation
+aact.cli.launch.launch : INFO     : Node task_env shutdown gracefully.
+/root/miniconda3/envs/cogym/lib/python3.11/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:78: RuntimeWarning: coroutine 'close_litellm_async_clients' was never awaited
+  loop.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Starting env node with config
+==================== _sync_run_node ====================
+------------------------------------------------------------ in TaskEnvNode __init__ ------------------------------------------------------------
+env_config: {'env_class': 'lit_survey', 'env_args': {'use_simulated_dataset': True, 'simulated_data_point_idx': 2}}
+------------------------------------------------------------ end of TaskEnvNode __init__ ------------------------------------------------------------
+
+
+==================== in TaskEnvNode event_loop ====================
+==================== Indicate the start of the task ====================
+==================== start_action ====================
+==================== in process_observation ====================
+==================== end process_observation ====================
+=============== role: basic_auto_agent ===============
+=============== self.env_uuid: env_related_work_2 ===============
+==================== after initial observation broadcast ====================
+==================== before super().event_loop() ====================
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+==================== end _sync_run_node ====================
+
